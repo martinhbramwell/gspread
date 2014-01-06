@@ -1,219 +1,251 @@
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>gspread — Google Spreadsheets Python library &mdash; gspread 0.0.12 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '0.0.12',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="gspread 0.0.12 documentation" href="#" />
-    <link rel="next" title="User Guide" href="userguide.html" /> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gspread by martinhbramwell</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="userguide.html" title="User Guide"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">gspread 0.0.12 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
+    <div class="wrapper">
+      <header>
+        <h1>Gspread</h1>
+        <p>Google Spreadsheets Python API</p>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="gspread-google-spreadsheets-python-library">
-<h1>gspread — Google Spreadsheets Python library<a class="headerlink" href="#gspread-google-spreadsheets-python-library" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/burnash/gspread">gspread</a> is a simple library
-for interacting with <a class="reference external" href="http://www.google.com/google-d-s/spreadsheets/">Google Spreadsheets</a>.</p>
-<div class="toctree-wrapper compound">
+        <p class="view"><a href="https://github.com/martinhbramwell/gspread">View the Project on GitHub <small>martinhbramwell/gspread</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/martinhbramwell/gspread/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/martinhbramwell/gspread/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/martinhbramwell/gspread">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="google-spreadsheets-python-api" class="anchor" href="#google-spreadsheets-python-api"><span class="octicon octicon-link"></span></a>Google Spreadsheets Python API</h1>
+
+<p><a href="https://crate.io/packages/gspread"><img src="https://pypip.in/d/gspread/badge.png" alt="Downloads"></a></p>
+
+<p>Manage your spreadsheets with <em>gspread</em> in Python.</p>
+
+<p>Features:</p>
+
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#installation">Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#from-github">From GitHub</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#from-pypi">From Pypi</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="userguide.html#quickstart">Quickstart</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#signing-in">Signing In</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#openning-a-spreadsheet">Openning A Spreadsheet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#selecting-a-worksheet">Selecting A Worksheet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#getting-a-cell">Getting A Cell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#getting-the-entire-row-or-column">Getting The Entire Row Or Column</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#selecting-a-cell-range">Selecting A Cell Range</a></li>
-<li class="toctree-l3"><a class="reference internal" href="userguide.html#updating-cells">Updating Cells</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference.html#main-interface">Main Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference.html#models">Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference.html#exceptions">Exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference.html#internal-modules">Internal Modules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="reference.html#gspread-httpsession">gspread.httpsession</a></li>
-<li class="toctree-l3"><a class="reference internal" href="reference.html#gspread-urls">gspread.urls</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Open a spreadsheet by its <em>title</em>, <em>url</em> or <em>key</em>.</li>
-<li>Select cells by labels, e.g. &#8216;A1&#8217;.</li>
+<li>Open a spreadsheet by its <strong>title</strong> or <strong>url</strong>.</li>
 <li>Extract range, entire row or column values.</li>
 <li>Independent of Google Data Python client library.</li>
 <li>Python 3 support.</li>
-</ul>
-</div>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>This code will connect to Google Data API
-and fetch a cell&#8217;s value from a spreadsheet:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">gspread</span>
+</ul><p><img src="https://raw.github.com/burnash/gspread/master/gspread.png" alt="logo"></p>
+
+<h2>
+<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic Usage</h2>
+
+<div class="highlight highlight-python"><pre><span class="kn">import</span> <span class="nn">gspread</span>
 
 <span class="c"># Login with your Google account</span>
-<span class="n">gc</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s">&#39;account@gmail.com&#39;</span><span class="p">,</span><span class="s">&#39;password&#39;</span><span class="p">)</span>
+<span class="n">gc</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s">'thedude@abid.es'</span><span class="p">,</span> <span class="s">'password'</span><span class="p">)</span>
 
-<span class="c"># Spreadsheets can be opened by their title in Google Docs</span>
-<span class="n">spreadsheet</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;where&#39;s all the money gone 2011&quot;</span><span class="p">)</span>
+<span class="c"># Open a worksheet from spreadsheet with one shot</span>
+<span class="n">wks</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">"Where is the money Lebowski?"</span><span class="p">)</span><span class="o">.</span><span class="n">sheet1</span>
 
-<span class="c"># Get a first worksheet</span>
-<span class="n">worksheet</span> <span class="o">=</span> <span class="n">spreadsheet</span><span class="o">.</span><span class="n">sheet1</span>
+<span class="n">wks</span><span class="o">.</span><span class="n">update_acell</span><span class="p">(</span><span class="s">'B2'</span><span class="p">,</span> <span class="s">"it's down there somewhere, let me take another look."</span><span class="p">)</span>
 
-<span class="c"># Get a cell value</span>
-<span class="n">val</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">acell</span><span class="p">(</span><span class="s">&#39;B1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+<span class="c"># Fetch a cell range</span>
+<span class="n">cell_list</span> <span class="o">=</span> <span class="n">wks</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s">'A1:B7'</span><span class="p">)</span>
+</pre></div>
 
-<span class="c"># Or</span>
+<h2>
+<a name="more-examples" class="anchor" href="#more-examples"><span class="octicon octicon-link"></span></a>More Examples</h2>
+
+<h3>
+<a name="opening-a-spreadsheet" class="anchor" href="#opening-a-spreadsheet"><span class="octicon octicon-link"></span></a>Opening a spreadsheet</h3>
+
+<div class="highlight highlight-python"><pre><span class="c"># You can open a spreadsheet by its title as it appears in Google Docs</span>
+<span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">"My poor gym results"</span><span class="p">)</span> <span class="c"># &lt;-- Look ma, no keys!</span>
+
+<span class="c"># If you want to be specific, use a key (which can be extracted from</span>
+<span class="c"># the spreadsheet's url)</span>
+<span class="n">sht1</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open_by_key</span><span class="p">(</span><span class="s">'0BmgG6nO_6dprdS1MN3d3MkdPa142WFRrdnRRUWl1UFE'</span><span class="p">)</span>
+
+<span class="c"># Or, if you feel really lazy to extract that key, paste the entire url</span>
+<span class="n">sht2</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open_by_url</span><span class="p">(</span><span class="s">'https://docs.google.com/spreadsheet/ccc?key=0Bm...FE&amp;hl'</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="selecting-a-worksheet" class="anchor" href="#selecting-a-worksheet"><span class="octicon octicon-link"></span></a>Selecting a worksheet</h3>
+
+<div class="highlight highlight-python"><pre><span class="c"># Select worksheet by index. Worksheet indexes start from zero</span>
+<span class="n">worksheet</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c"># By title</span>
+<span class="n">worksheet</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="s">"January"</span><span class="p">)</span>
+
+<span class="c"># Most common case: Sheet1</span>
+<span class="n">worksheet</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">sheet1</span>
+
+<span class="c"># Get a list of all worksheets</span>
+<span class="n">worksheet_list</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">worksheets</span><span class="p">()</span>
+</pre></div>
+
+<h3>
+<a name="creating-a-worksheet" class="anchor" href="#creating-a-worksheet"><span class="octicon octicon-link"></span></a>Creating a worksheet</h3>
+
+<div class="highlight highlight-python"><pre><span class="n">worksheet</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"A worksheet"</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="s">"100"</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="s">"20"</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="deleting-a-worksheet" class="anchor" href="#deleting-a-worksheet"><span class="octicon octicon-link"></span></a>Deleting a worksheet</h3>
+
+<div class="highlight highlight-python"><pre><span class="n">sh</span><span class="o">.</span><span class="n">del_worksheet</span><span class="p">(</span><span class="n">worksheet</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="getting-a-cell-value" class="anchor" href="#getting-a-cell-value"><span class="octicon octicon-link"></span></a>Getting a cell value</h3>
+
+<div class="highlight highlight-python"><pre><span class="c"># With label</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">acell</span><span class="p">(</span><span class="s">'B1'</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
+
+<span class="c"># With coords</span>
 <span class="n">val</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
-</div>
-<p>The cell&#8217;s value can be easily updated:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">worksheet</span><span class="o">.</span><span class="n">update_acell</span><span class="p">(</span><span class="s">&#39;B1&#39;</span><span class="p">,</span> <span class="s">&#39;Bingo!&#39;</span><span class="p">)</span>
+
+<h3>
+<a name="getting-all-values-from-a-row-or-a-column" class="anchor" href="#getting-all-values-from-a-row-or-a-column"><span class="octicon octicon-link"></span></a>Getting all values from a row or a column</h3>
+
+<div class="highlight highlight-python"><pre><span class="c"># Get all values from the first row</span>
+<span class="n">values_list</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">row_values</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c"># Get all values from the first column</span>
+<span class="n">values_list</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">col_values</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="getting-all-values-from-a-worksheet-as-a-list-of-lists" class="anchor" href="#getting-all-values-from-a-worksheet-as-a-list-of-lists"><span class="octicon octicon-link"></span></a>Getting all values from a worksheet as a list of lists</h3>
+
+<div class="highlight highlight-python"><pre><span class="n">list_of_lists</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">get_all_values</span><span class="p">()</span>
+</pre></div>
+
+<h3>
+<a name="finding-a-cell" class="anchor" href="#finding-a-cell"><span class="octicon octicon-link"></span></a>Finding a cell</h3>
+
+<div class="highlight highlight-python"><pre><span class="c"># Find a cell with exact string value</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">"Dough"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Found something at R</span><span class="si">%s</span><span class="s">C</span><span class="si">%s</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">row</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">col</span><span class="p">))</span>
+
+<span class="c"># Find a cell matching a regular expression</span>
+<span class="n">amount_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r'(Big|Enormous) dough'</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">amount_re</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="finding-all-matched-cells" class="anchor" href="#finding-all-matched-cells"><span class="octicon octicon-link"></span></a>Finding all matched cells</h3>
+
+<div class="highlight highlight-python"><pre><span class="c"># Find all cells with string value</span>
+<span class="n">cell_list</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">"Rug store"</span><span class="p">)</span>
+
+<span class="c"># Find all cells with regexp</span>
+<span class="n">criteria_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r'(Small|Room-tiering) rug'</span><span class="p">)</span>
+<span class="n">cell_list</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">criteria_re</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="cell-object" class="anchor" href="#cell-object"><span class="octicon octicon-link"></span></a>Cell object</h3>
+
+<p>Each cell has a value and coordinates properties.</p>
+
+<div class="highlight highlight-python"><pre>
+<span class="n">value</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">value</span>
+<span class="n">row_number</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">row</span>
+<span class="n">column_number</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">col</span>
+</pre></div>
+
+<h3>
+<a name="updating-cells" class="anchor" href="#updating-cells"><span class="octicon octicon-link"></span></a>Updating cells</h3>
+
+<div class="highlight highlight-python"><pre><span class="n">worksheet</span><span class="o">.</span><span class="n">update_acell</span><span class="p">(</span><span class="s">'B1'</span><span class="p">,</span> <span class="s">'Bingo!'</span><span class="p">)</span>
 
 <span class="c"># Or</span>
-<span class="n">worksheet</span><span class="o">.</span><span class="n">update_cell</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;Bingo!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>To fetch a cell range, specify it by common notation:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">cell_list</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s">&#39;A1:A7&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>After some processing, this range can be updated in batch:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cell_list</span><span class="p">:</span>
-    <span class="n">cell</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s">&#39;O_o&#39;</span>
+<span class="n">worksheet</span><span class="o">.</span><span class="n">update_cell</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'Bingo!'</span><span class="p">)</span>
 
+<span class="c"># Select a range</span>
+<span class="n">cell_list</span> <span class="o">=</span> <span class="n">worksheet</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="s">'A1:C7'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cell_list</span><span class="p">:</span>
+    <span class="n">cell</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s">'O_o'</span>
+
+<span class="c"># Update in batch</span>
 <span class="n">worksheet</span><span class="o">.</span><span class="n">update_cells</span><span class="p">(</span><span class="n">cell_list</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="code">
-<h1>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h1>
-<p>Check <a class="reference external" href="https://github.com/burnash/gspread">gspread on GitHub</a>.</p>
-<p>Any feedback is more than welcome: open up a new <a class="reference external" href="https://github.com/burnash/gspread/issues">github issue</a> and I&#8217;ll be dancing
-like crazy.</p>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-</ul>
-</div>
 
+<h3>
+<a name="two-factor-authorization" class="anchor" href="#two-factor-authorization"><span class="octicon octicon-link"></span></a>Two Factor Authorization</h3>
 
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">gspread — Google Spreadsheets Python library</a><ul>
-<li><a class="reference internal" href="#features">Features</a></li>
-<li><a class="reference internal" href="#example">Example</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#code">Code</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
+<p>In case your Google Account protected with <a href="http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=180744">Two Factor Authorization</a>, 
+you have to create <a href="https://accounts.google.com/b/0/IssuedAuthSubTokens?hl=en_GB">an application-specific password</a> and use your email
+to login as usual.</p>
 
-  <h4>Next topic</h4>
-  <p class="topless"><a href="userguide.html"
-                        title="next chapter">User Guide</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
+<p>Otherwise you will get an <code>AuthenticationError: Unable to authenticate. 403 code</code> when trying to login.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>Python 2.6+ or Python 3+</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a name="from-github" class="anchor" href="#from-github"><span class="octicon octicon-link"></span></a>From GitHub</h3>
+
+<div class="highlight highlight-sh"><pre>git clone https://github.com/burnash/gspread.git
+<span class="nb">cd </span>gspread
+python setup.py install
+</pre></div>
+
+<h3>
+<a name="from-pypi" class="anchor" href="#from-pypi"><span class="octicon octicon-link"></span></a>From PyPI</h3>
+
+<div class="highlight highlight-sh"><pre>pip install gspread
+</pre></div>
+
+<p>If you're on easy_install, it's:</p>
+
+<div class="highlight highlight-sh"><pre>easy_install gspread
+</pre></div>
+
+<h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p><a href="http://burnash.github.com/gspread/">API Reference</a></p>
+
+<h2>
+<a name="suggestions--code-contribution" class="anchor" href="#suggestions--code-contribution"><span class="octicon octicon-link"></span></a>Suggestions &amp; Code Contribution</h2>
+
+<ul>
+<li><a href="https://github.com/candeira">Javier Candeira</a></li>
+<li><a href="https://github.com/ac001">Peter "Mash" Morgan</a></li>
+<li><a href="https://github.com/ptlu">ptlu</a></li>
+<li><a href="https://github.com/aginor">aginor</a></li>
+</ul><h2>
+<a name="feedback" class="anchor" href="#feedback"><span class="octicon octicon-link"></span></a>Feedback</h2>
+
+<p>Please don't hesitate to open up a new <a href="https://github.com/burnash/gspread/issues">github issue</a>
+or simply drop me a line to <a href="mailto:fuss.here@gmail.com">fuss.here@gmail.com</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/martinhbramwell">martinhbramwell</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="userguide.html" title="User Guide"
-             >next</a> |</li>
-        <li><a href="#">gspread 0.0.12 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2011, Anton Burnashev.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
-    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
